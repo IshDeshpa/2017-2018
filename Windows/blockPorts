@@ -1,0 +1,11 @@
+@echo off
+
+netsh advfirewall firewall add rule name="BlockSAMBA" protocol=TCP dir=out remoteport=139 action=block
+netsh advfirewall firewall add rule name="BlockSAMBA2" protocol=TCP dir=out remoteport=445 action=block
+netsh advfirewall firewall add rule name="BlockSAMBA3" protocol=UDP dir=out remoteport=137 action=block
+netsh advfirewall firewall add rule name="BlockSAMBA4" protocol=UDP dir=out remoteport=138 action=block
+
+netsh advfirewall firewall add rule name="BlockHTTP" protocol=TCP dir=out remoteport=80 action=block
+
+netsh advfirewall firewall add rule name="BlockTELNET" protocol=TCP dir=out remoteport=23 action=block
+
